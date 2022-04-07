@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so ng to</title>
+</head>
+<body>
+<script>
+    function checkPrime(N) {
+        if (N < 2) {
+            return false;
+        }
+        for (let i = 2; i < N; i++) {
+            if (N % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    console.log(checkPrime(2));
+
+    let x = prompt("nhap vao so luong so nguyen to can in ra")
+    function listPrime() {
+        let count = 0;
+        let y = 0;
+        while (count < x) {
+            if (checkPrime(y) === true) {
+                count++;
+                console.log(y + " la so nguyen to")
+            }
+            y++;
+        }
+    }
+
+    listPrime(x);
+</script>
+</body>
+</html>
